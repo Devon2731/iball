@@ -1,9 +1,9 @@
 'use client';
 import { TextGenerateEffect } from '../../ui/text-generate-effect';
 
-const words = `Work`;
-const secLine = `or`;
-const thrLine = `Don't Eat`;
+const words = `Welcome`;
+const secLine = `to the`;
+const thrLine = `LAB`;
 
 export function HeroWords() {
   return (
