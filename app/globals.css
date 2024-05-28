@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Graduate&family=Honk&family=Kode+Mono:wght@400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,6 +23,67 @@ button {
 }
 
 #hero-handle {
-  font-family: Stencil;
+  /* font-family: Stencil; */
   color: white;
 }
+
+.graduate-regular {
+  font-family: 'Graduate', serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.honk-lab {
+  font-family: 'Honk', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    'MORF' 15,
+    'SHLN' 50;
+}
+
+.bungee-spice-regular {
+  font-family: 'Bungee Spice', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kode-mono-lab {
+  font-family: 'Kode Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hero-embed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 41.6667%;
+  padding-bottom: 0;
+  box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+  margin-top: 1.6em;
+  margin-bottom: 0.9em;
+  overflow: hidden;
+  border-radius: 8px;
+  will-change: transform;
+}
+/* <iframe
+loading="lazy"
+className='hero-embed'
+src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGE1SzyJKA&#x2F;cshzHeXeeHqZHMhiz8WXbg&#x2F;watch?embed"
+
+allow="fullscreen"
+></iframe> */
