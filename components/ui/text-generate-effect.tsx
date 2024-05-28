@@ -16,7 +16,7 @@ export const TextGenerateEffect = ({ words, className }: { words: string; classN
         opacity: 1
       },
       {
-        duration: 2,
+        duration: 5,
         delay: stagger(0.2)
       }
     );
@@ -42,8 +42,8 @@ export const TextGenerateEffect = ({ words, className }: { words: string; classN
 
   return (
     <div className={cn('font-bold', className)}>
-      <div className="mt-4">
-        <div className="text-xl leading-snug tracking-wide text-black lg:text-7xl dark:text-white">
+      <div className="mt-2">
+        <div className="kode-mono-lab text-xl text-green-400 md:text-[38px] lg:text-4xl xl:text-7xl dark:text-green-400">
           {renderWords()}
         </div>
       </div>
