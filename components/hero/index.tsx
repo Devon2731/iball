@@ -22,7 +22,7 @@ const Hero = () => {
       /> */}
       <ParallaxBanner
         layers={[{ image: '/outside-hoop.png', speed: -15 }]}
-        className="relative mb-10 mt-1 aspect-[2/1] w-screen sm:mb-12 sm:aspect-[3/1]"
+        className="mb-10 mt-1 aspect-[2/1] sm:mb-12 sm:aspect-[3/1]"
       />
     </div>
   );

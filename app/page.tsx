@@ -15,7 +15,7 @@ export default async function HomePage() {
     <>
       <Hero />
       <hr></hr>
-      <p className="kode-mono-lab bg-slate-900 text-center text-xl md:text-[30px] lg:text-3xl  xl:text-6xl dark:text-white">
+      <p className="kode-mono-lab bg-slate-900 text-center text-xl md:text-[30px] lg:text-5xl  xl:text-7xl dark:text-white">
         FEATURED
       </p>
       <hr className="mb-3"></hr>
