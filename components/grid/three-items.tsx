@@ -14,7 +14,7 @@ function ThreeItemGridItem({
   priority?: boolean;
 }) {
   return (
-    <div className="md:col-span-2 md:row-span-1">
+    <div className="max-h-72 md:col-span-2 md:row-span-1">
       <Link className="relative block aspect-square h-full w-full" href={`/product/${item.handle}`}>
         <GridTileImage
           src={item.featuredImage.url}
@@ -45,7 +45,7 @@ export async function ThreeItemGrid() {
   const [firstProduct, secondProduct, thirdProduct] = homepageItems;
 
   return (
-    <section className="mx-auto grid max-w-screen-2xl gap-4 px-4 pb-4 md:grid-cols-6 md:grid-rows-2">
+    <section className="mx-auto grid max-w-screen-2xl gap-4 px-4 pb-4 md:grid-cols-6 md:grid-rows-1 md:pb-24 md:pt-8">
       <Suspense>
         <ThreeItemGridItem item={firstProduct} priority={true} />
       </Suspense>

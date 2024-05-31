@@ -14,6 +14,11 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+      <hr></hr>
+      <p className="kode-mono-lab bg-slate-900 text-center text-xl md:text-[30px] lg:text-5xl  xl:text-7xl dark:text-white">
+        FEATURED
+      </p>
+      <hr className="mb-3"></hr>
       <ThreeItemGrid />
       <Footer />
     </>
