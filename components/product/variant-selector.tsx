@@ -1,5 +1,5 @@
 'use client';
-
+// import { useHoodieContext } from 'app/providers';
 import clsx from 'clsx';
 import { ProductOption, ProductVariant } from 'lib/shopify/types';
 import { createUrl } from 'lib/utils';
@@ -21,6 +21,7 @@ export function VariantSelector({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  // const { hoodie, setHoodie } = useHoodieContext();
   const hasNoOptionsOrJustOneOption =
     !options.length || (options.length === 1 && options[0]?.values.length === 1);
 
