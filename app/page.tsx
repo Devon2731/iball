@@ -1,25 +1,17 @@
-// import { Carousel } from 'components/carousel';
-import { ThreeItemGrid } from 'components/grid/three-items';
-import Hero from 'components/hero';
 import Footer from 'components/layout/footer';
-
+import Hero from 'components/ui/hero';
+import UnseenHours from 'components/ui/UnseenHours';
 export const metadata = {
   description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
-  openGraph: {
-    type: 'website'
-  }
+  openGraph: { type: 'website' }
 };
-
 export default async function HomePage() {
   return (
     <>
       <Hero />
       <hr></hr>
-      <p className="kode-mono-lab bg-slate-900 text-center text-xl md:text-[30px] lg:text-5xl  xl:text-7xl dark:text-white">
-        FEATURED
-      </p>
+      <UnseenHours />
       <hr className="mb-3"></hr>
-      <ThreeItemGrid />
       <Footer />
     </>
   );
