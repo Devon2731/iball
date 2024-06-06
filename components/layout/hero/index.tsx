@@ -12,7 +12,7 @@ const Hero = () => {
       >
         <HeroWords />
 
-        <video className="-z-10 h-96 w-full object-top sm:mb-24" autoPlay muted loop>
+        <video className="-z-10 h-96 w-full object-top sm:mb-24" autoPlay muted loop playsInline>
           <source src="/iball.mp4" type="video/mp4"></source>
         </video>
       </Parallax>
