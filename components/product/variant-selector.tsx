@@ -22,20 +22,13 @@ export function VariantSelector({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  // const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>();
   const { setPrice } = useGlobalContext();
-
-  // useEffect(() => {
-  //   handleVariantChange(variantSelected);
-  // }, [variantSelected]);
 
   const handleVariantChange = (variantId: string) => {
     const variant = variants.find((v) => v.id === variantId);
     if (variant) {
-      // setSelectedVariant(variant);
       setPrice(variant.price);
     }
-    //if filtered arr length is 1 then, find the price on the data
   };
 
   const hasNoOptionsOrJustOneOption =
@@ -54,16 +47,6 @@ export function VariantSelector({
       {}
     )
   }));
-
-  // const matchingVariant = combinations.filter(
-  //   (combination) =>
-  //     selectedOptions.every(
-  //       ([key, value]) => combination[key] === value && combination.availableForSale
-  //     ) && combination.id === variantSelected
-  // );
-  // console.log(matchingVariant, 'matching variant');
-  // const selection = matchingVariant[0]?.id;
-  // console.log('variant', selection);
 
   return options.map((option) => (
     <dl className="mb-8" key={option.id}>
@@ -100,20 +83,6 @@ export function VariantSelector({
               ([key, value]) => combination[key] === value && combination.availableForSale
             )
           );
-
-          // Step 2 & 3: Find the matching variant and extract its variantId
-
-          // if (selection) {
-          //   setVariantSelected(variantSelected);
-          // }
-          // const filteredProductPrice =
-          // console.log(matchingVariant, 'matching');
-          // if (matchingVariant) {
-          //   // Step 4: Call onVariantChange with the matching variant's variantId
-          //   onVariantChange(matchingVariant.variantId);
-          // } else {
-          //   console.error('No matching variant found for the selected options.');
-          // }
 
           // The option is active if it's in the url params.
           const isActive = searchParams.get(optionNameLowerCase) === value;
