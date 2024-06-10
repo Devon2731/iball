@@ -1,9 +1,10 @@
 'use client';
-// import { useHoodieContext } from 'app/providers';
+import { useGlobalContext } from 'app/provider';
 import clsx from 'clsx';
 import { ProductOption, ProductVariant } from 'lib/shopify/types';
 import { createUrl } from 'lib/utils';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+// import { useState } from 'react';
 
 type Combination = {
   id: string;
@@ -21,7 +22,15 @@ export function VariantSelector({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  // const { hoodie, setHoodie } = useHoodieContext();
+  const { setPrice } = useGlobalContext();
+
+  const handleVariantChange = (variantId: string) => {
+    const variant = variants.find((v) => v.id === variantId);
+    if (variant) {
+      setPrice(variant.price);
+    }
+  };
+
   const hasNoOptionsOrJustOneOption =
     !options.length || (options.length === 1 && options[0]?.values.length === 1);
 
@@ -68,6 +77,7 @@ export function VariantSelector({
               (option) => option.name.toLowerCase() === key && option.values.includes(value)
             )
           );
+
           const isAvailableForSale = combinations.find((combination) =>
             filtered.every(
               ([key, value]) => combination[key] === value && combination.availableForSale
@@ -84,6 +94,12 @@ export function VariantSelector({
               disabled={!isAvailableForSale}
               onClick={() => {
                 router.replace(optionUrl, { scroll: false });
+                if (value) {
+                  const comboFilter = combinations.find((combination) =>
+                    filtered.find(([key, value]) => combination[key] === value)
+                  );
+                  handleVariantChange(comboFilter?.id || '');
+                }
               }}
               title={`${option.name} ${value}${!isAvailableForSale ? ' (Out of Stock)' : ''}`}
               className={clsx(
