@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { ProductOption, ProductVariant } from 'lib/shopify/types';
 import { createUrl } from 'lib/utils';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 type Combination = {
   id: string;
@@ -23,7 +23,6 @@ export function VariantSelector({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   // const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>();
-  const [variantSelected, setVariantSelected] = useState('');
   const { setPrice } = useGlobalContext();
 
   // useEffect(() => {
