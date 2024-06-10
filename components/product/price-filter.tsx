@@ -1,19 +1,24 @@
 'use client';
 import Price from 'components/price';
 import { Product } from 'lib/shopify/types';
-import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+
 export const PriceFilter = ({ product }: { product: Product }) => {
-  const searchParams = useSearchParams();
-  const search = searchParams.get('style');
-  const [hoodie, setHoodie] = useState(false);
+  const [price, setPrice] = useState(product.priceRange.minVariantPrice);
 
   //Checks for if a hoodie is selected
-  if (search === 'Hoodie' && !hoodie) {
-    setHoodie(true);
-  } else if (search === 'T-shirt' || ('' && hoodie)) {
-    setHoodie(false);
-  }
+  // if (search === 'Hoodie' && !hoodie) {
+  //   setHoodie(true);
+  // } else if (search === 'T-shirt' || ('' && hoodie)) {
+  //   setHoodie(false);
+  // }
+  // const variantSelector = product.variants.filter((variant) => search === variant);
+
+  // console.log(variantSelector);
+  // if (variantSelector) {
+
+  // }
+  // console.log(variantSelector);
+  //return price of variant selected
 
   return (
     <>
@@ -31,3 +36,19 @@ export const PriceFilter = ({ product }: { product: Product }) => {
     </>
   );
 };
+
+return (
+  <>
+    {hoodie ? (
+      <Price
+        amount={product.priceRange.maxVariantPrice.amount}
+        currencyCode={product.priceRange.maxVariantPrice.currencyCode}
+      />
+    ) : (
+      <Price
+        amount={product.priceRange.minVariantPrice.amount}
+        currencyCode={product.priceRange.maxVariantPrice.currencyCode}
+      />
+    )}
+  </>
+);

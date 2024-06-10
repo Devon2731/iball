@@ -1,9 +1,10 @@
 'use client';
-// import { useHoodieContext } from 'app/providers';
+import { useGlobalContext } from 'app/provider';
 import clsx from 'clsx';
 import { ProductOption, ProductVariant } from 'lib/shopify/types';
 import { createUrl } from 'lib/utils';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useState } from 'react';
 
 type Combination = {
   id: string;
@@ -21,7 +22,23 @@ export function VariantSelector({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  // const { hoodie, setHoodie } = useHoodieContext();
+  // const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>();
+  const [variantSelected, setVariantSelected] = useState('');
+  const { setPrice } = useGlobalContext();
+
+  // useEffect(() => {
+  //   handleVariantChange(variantSelected);
+  // }, [variantSelected]);
+
+  const handleVariantChange = (variantId: string) => {
+    const variant = variants.find((v) => v.id === variantId);
+    if (variant) {
+      // setSelectedVariant(variant);
+      setPrice(variant.price);
+    }
+    //if filtered arr length is 1 then, find the price on the data
+  };
+
   const hasNoOptionsOrJustOneOption =
     !options.length || (options.length === 1 && options[0]?.values.length === 1);
 
@@ -38,6 +55,16 @@ export function VariantSelector({
       {}
     )
   }));
+
+  // const matchingVariant = combinations.filter(
+  //   (combination) =>
+  //     selectedOptions.every(
+  //       ([key, value]) => combination[key] === value && combination.availableForSale
+  //     ) && combination.id === variantSelected
+  // );
+  // console.log(matchingVariant, 'matching variant');
+  // const selection = matchingVariant[0]?.id;
+  // console.log('variant', selection);
 
   return options.map((option) => (
     <dl className="mb-8" key={option.id}>
@@ -68,11 +95,26 @@ export function VariantSelector({
               (option) => option.name.toLowerCase() === key && option.values.includes(value)
             )
           );
+
           const isAvailableForSale = combinations.find((combination) =>
             filtered.every(
               ([key, value]) => combination[key] === value && combination.availableForSale
             )
           );
+
+          // Step 2 & 3: Find the matching variant and extract its variantId
+
+          // if (selection) {
+          //   setVariantSelected(variantSelected);
+          // }
+          // const filteredProductPrice =
+          // console.log(matchingVariant, 'matching');
+          // if (matchingVariant) {
+          //   // Step 4: Call onVariantChange with the matching variant's variantId
+          //   onVariantChange(matchingVariant.variantId);
+          // } else {
+          //   console.error('No matching variant found for the selected options.');
+          // }
 
           // The option is active if it's in the url params.
           const isActive = searchParams.get(optionNameLowerCase) === value;
@@ -84,6 +126,12 @@ export function VariantSelector({
               disabled={!isAvailableForSale}
               onClick={() => {
                 router.replace(optionUrl, { scroll: false });
+                if (value) {
+                  const comboFilter = combinations.find((combination) =>
+                    filtered.find(([key, value]) => combination[key] === value)
+                  );
+                  handleVariantChange(comboFilter?.id || '');
+                }
               }}
               title={`${option.name} ${value}${!isAvailableForSale ? ' (Out of Stock)' : ''}`}
               className={clsx(
