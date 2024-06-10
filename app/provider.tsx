@@ -11,7 +11,7 @@ const GlobalContext = createContext<{
 export const useGlobalContext = () => useContext(GlobalContext);
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  const [price, setPrice] = useState('');
+  const [price, setPrice] = useState({ amount: '', currencyCode: '' });
   return (
     <GlobalContext.Provider value={{ price, setPrice }}>
       <ParallaxProvider>{children}</ParallaxProvider>
