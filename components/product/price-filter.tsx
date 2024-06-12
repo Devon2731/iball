@@ -14,8 +14,12 @@ export const PriceFilter = ({ min, max }: Range) => {
         <Price amount={price.amount} currencyCode={currencyCode} />
       ) : (
         <div className="flex">
-          <Price amount={min} currencyCode={currencyCode} />
-          <p className="pe-2 ps-2">-</p>
+          {min !== max ? (
+            <>
+              <Price amount={min} currencyCode={currencyCode} />
+              <p className="pe-2 ps-2">-</p>
+            </>
+          ) : null}
           <Price amount={max} currencyCode={currencyCode} />
         </div>
       )}
