@@ -21,7 +21,7 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.19",
+    "@headlessui/react": "^2.0.4",
     "@heroicons/react": "^2.1.3",
     "@nextui-org/react": "^2.4.1",
     "animate.css": "^4.1.1",
