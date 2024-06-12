@@ -73,7 +73,7 @@ export default async function Footer() {
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
           <p>Designed in Virginia</p>
           <p className="md:ml-auto">
-            <a href="https://vercel.com" className="text-black dark:text-white">
+            <a href="https://seeyouthursday.dev/" className="text-black dark:text-white">
               Crafted by SeeYouThursday 😎
             </a>
           </p>
