@@ -5,6 +5,8 @@ import 'animate.css/animate.compat.css';
 import Image from 'next/image';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import { Button } from '@headlessui/react';
+import Link from 'next/link';
 
 interface TestimonialProps {
   testimonial: { text: string; author: string };
@@ -53,7 +55,7 @@ const UnseenHours: React.FC = () => {
 
       <div className="pb-4 pt-4 md:pb-6 md:pt-6 lg:pb-12 lg:pt-12 xl:pb-24 xl:pt-24">
         <ScrollAnimation animateIn="fadeIn" delay={0.1 * 2000} animateOnce>
-          <p className="kode-mono-lab -translate-x-half transform px-4 text-center text-base transition-transform duration-500 md:px-6 md:text-lg lg:text-xl xl:text-2xl">
+          <p className="kode-mono-lab -translate-x-half transform px-4 pb-6 pt-6 text-center text-base transition-transform duration-500 md:px-6 md:text-lg lg:text-xl xl:text-2xl">
             WE INSPIRE ATHLETES THROUGH ELITE TRAINING AND SHARING THE DETAILS OF THE GAME. OUR
             TRAINING SPECIALIZES IN HELPING PROGRAMS AND PLAYERS TO SCORE AND DEVELOP THE SKILLS
             NEEDED TO BE SUCCESSFUL IN GAME SITUATIONS.
@@ -72,7 +74,7 @@ const UnseenHours: React.FC = () => {
 
       <div className="pb-4 pt-4 md:pb-6 md:pt-6 lg:pb-12 lg:pt-12 xl:pb-24 xl:pt-24">
         <ScrollAnimation animateIn="fadeIn" delay={0.1 * 2000} animateOnce>
-          <p className="kode-mono-lab -translate-x-half transform px-4 text-center text-base transition-transform duration-500 md:px-6 md:text-lg lg:text-xl xl:text-2xl">
+          <p className="kode-mono-lab -translate-x-half transform px-4 pb-6 pt-6 text-center text-base transition-transform duration-500 md:px-6 md:text-lg lg:text-xl xl:text-2xl">
             WE HAVE THE ABILITY TO WORK WITH ALL LEVELS AND AGES. WE ARE THE BEST AT PROVIDING THE
             APPROPRIATE “STARTER PACK” FOR NEW INSPIRING PLAYERS.
           </p>
@@ -80,9 +82,13 @@ const UnseenHours: React.FC = () => {
       </div>
 
       <div className="mb-4 mt-4 flex items-center justify-center md:mb-10 md:mt-10 lg:mb-20 lg:mt-20">
-        <button className="rounded-lg border border-blue-500 bg-blue-500 px-6 py-2 font-semibold text-white hover:border-transparent hover:bg-orange-500 hover:text-white md:px-8 md:py-3 lg:py-4">
+        <Button
+          className="rounded-lg border border-blue-500 bg-blue-500 px-6 py-2 font-semibold text-white hover:border-transparent hover:bg-orange-500 hover:text-white md:px-8 md:py-3 lg:py-4"
+          as={Link}
+          href="https://www.iball247.com/product/classes"
+        >
           Book Here
-        </button>
+        </Button>
       </div>
 
       <div className="bg-black py-4 text-white md:py-8">
