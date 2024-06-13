@@ -85,7 +85,7 @@ const UnseenHours: React.FC = () => {
         <Button
           className="rounded-lg border border-blue-500 bg-blue-500 px-6 py-2 font-semibold text-white hover:border-transparent hover:bg-orange-500 hover:text-white md:px-8 md:py-3 lg:py-4"
           as={Link}
-          href="https://www.iball247.com/product/training-session-demo"
+          href="https://www.iball247.com/product/classes"
         >
           Book Here
         </Button>
