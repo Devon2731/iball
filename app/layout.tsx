@@ -37,11 +37,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   return (
     <html lang="en" className={GeistSans.variable}>
       <Head>
-        <script
-          type="text/javascript"
-          src="https://assets.calendly.com/assets/external/widget.js"
-          async
-        ></script>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
         <Navbar />
