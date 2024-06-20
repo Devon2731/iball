@@ -73,7 +73,7 @@ const UnseenHours: React.FC = () => {
       </div>
 
       <div className="pb-4 pt-4 md:pb-6 md:pt-6 lg:pb-12 lg:pt-12 xl:pb-24 xl:pt-24">
-        <ScrollAnimation animateIn="fadeIn" delay={0.1 * 2000} animateOnce>
+        <ScrollAnimation animateIn="fadeIn" delay={0.1 * 1000} animateOnce>
           <p className="kode-mono-lab -translate-x-half transform px-4 pb-6 pt-6 text-center text-base transition-transform duration-500 md:px-6 md:text-lg lg:text-xl xl:text-2xl">
             WE HAVE THE ABILITY TO WORK WITH ALL LEVELS AND AGES. WE ARE THE BEST AT PROVIDING THE
             APPROPRIATE “STARTER PACK” FOR NEW INSPIRING PLAYERS.
