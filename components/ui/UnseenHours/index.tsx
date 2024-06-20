@@ -14,7 +14,7 @@ interface TestimonialProps {
 
 const Testimonial: React.FC<TestimonialProps> = ({ testimonial }) => {
   return (
-    <div className="bg-black py-4 text-white md:py-8">
+    <div className="bg-black py-4 pe-4 ps-4 text-white md:py-8">
       <div className="mx-auto max-w-4xl text-center">
         <p className="mb-2 text-base md:mb-4 md:text-lg lg:text-xl xl:text-2xl">
           {testimonial.text}
@@ -91,16 +91,19 @@ const UnseenHours: React.FC = () => {
         </Button>
       </div>
 
-      <div className="bg-black py-4 text-white md:py-8">
+      <div
+        className="bg-black py-4
+       ps-5 text-white md:py-8"
+      >
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-2 text-lg font-bold md:mb-4 md:text-xl lg:text-2xl">
+          <h2 className="mb-2 pt-8 text-lg font-bold md:mb-4 md:text-xl lg:text-2xl">
             CLIENT TESTIMONIAL
           </h2>
           <p className="mb-4 text-xs uppercase md:mb-8 md:text-sm">
             Positive Testimonials That Motivate Us
           </p>
           <Carousel
-            showArrows={true}
+            showArrows={false}
             infiniteLoop={true}
             showThumbs={false}
             showStatus={false}
@@ -124,7 +127,7 @@ const UnseenHours: React.FC = () => {
                   type="button"
                   onClick={onClickHandler}
                   title={label}
-                  className="absolute right-0 mr-6 rounded-full bg-black bg-opacity-50 p-2 text-white hover:bg-opacity-75 md:p-3 lg:p-4"
+                  className="absolute right-3 mr-0 rounded-full bg-black bg-opacity-50 p-2 text-white hover:bg-opacity-75 md:p-3 lg:p-4"
                 >
                   ❯
                 </button>
