@@ -1,3 +1,8 @@
+'use client';
+
+import { Button } from '@headlessui/react';
+import Link from 'next/link';
+
 export const PushPressCal = () => {
   return (
     <div className="flex items-center justify-center overflow-hidden rounded-xl">
@@ -16,13 +21,13 @@ export const PushPressCal = () => {
 
 export const PushPressButton = () => {
   return (
-    <>
-      <button className="relative p-[3px]">
-        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500" />
-        <div className="group relative  rounded-[6px] bg-black  px-8 py-2 text-white transition duration-200 hover:bg-transparent">
-          Lit up borders
-        </div>
-      </button>
-    </>
+    <Button
+      className="m-4 rounded-md bg-[#0070f3] px-8 py-4 font-bold text-white shadow-[0_4px_14px_0_rgb(0,118,255,60%)] transition duration-200 ease-linear hover:bg-orange-700 hover:shadow-[0_6px_20px_rgba(0,118,255,23%)]"
+      as={Link}
+      href="/contact"
+    >
+      Book Here
+      {/* // TODO: change href to domain when received from client */}
+    </Button>
   );
 };
