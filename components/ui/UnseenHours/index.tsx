@@ -1,12 +1,11 @@
 'use client';
 
-import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.compat.css';
+import { PushPressButton } from 'components/pushpress';
 import Image from 'next/image';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { Carousel } from 'react-responsive-carousel';
-import { Button } from '@headlessui/react';
-import Link from 'next/link';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 interface TestimonialProps {
   testimonial: { text: string; author: string };
@@ -82,13 +81,7 @@ const UnseenHours: React.FC = () => {
       </div>
 
       <div className="mb-4 mt-4 flex items-center justify-center md:mb-10 md:mt-10 lg:mb-20 lg:mt-20">
-        <Button
-          className="rounded-lg border border-blue-500 bg-blue-500 px-6 py-2 font-semibold text-white hover:border-transparent hover:bg-orange-500 hover:text-white md:px-8 md:py-3 lg:py-4"
-          as={Link}
-          href="https://www.iball247.com/product/classes"
-        >
-          Book Here
-        </Button>
+        <PushPressButton />
       </div>
 
       <div
