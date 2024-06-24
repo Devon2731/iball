@@ -1,7 +1,7 @@
 'use client';
 
 import 'animate.css/animate.compat.css';
-import { PushPressButton } from 'components/pushpress';
+import { PushPressButton } from 'components/pushpress-btn';
 import Image from 'next/image';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Carousel } from 'react-responsive-carousel';
