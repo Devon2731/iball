@@ -1,9 +1,10 @@
 import Footer from 'components/layout/footer';
 import Hero from 'components/layout/hero';
+import { PushPressCal } from 'components/pushpress-cal';
 import UnseenHours from 'components/ui/UnseenHours';
 
 export const metadata = {
-  description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
+  description: 'iBall247 High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
   openGraph: { type: 'website' }
 };
 
@@ -14,8 +15,7 @@ export default async function HomePage() {
       <hr></hr>
       <UnseenHours />
       <hr className="mb-3"></hr>
-      {/* //TODO: uncomment/import when client provides subdomain */}
-      {/* <PushPressCal /> */}
+      <PushPressCal />
       <Footer />
     </>
   );
