@@ -88,53 +88,44 @@ const UnseenHours: React.FC = () => {
         className="bg-black py-4
        ps-5 text-white md:py-8"
       >
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-2 pt-8 text-lg font-bold md:mb-4 md:text-xl lg:text-2xl">
-            CLIENT TESTIMONIAL
-          </h2>
-          <p className="mb-4 text-xs uppercase md:mb-8 md:text-sm">
-            Positive Testimonials That Motivate Us
-          </p>
-          <Carousel
-            showArrows={false}
-            infiniteLoop={true}
-            showThumbs={false}
-            showStatus={false}
-            autoPlay={true}
-            interval={5000}
-            renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
-                <button
-                  type="button"
-                  onClick={onClickHandler}
-                  title={label}
-                  className="absolute left-0 ml-6 rounded-full bg-black bg-opacity-50 p-2 text-white hover:bg-opacity-75 md:p-3 lg:p-4"
-                >
-                  ❮
-                </button>
-              )
-            }
-            renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <button
-                  type="button"
-                  onClick={onClickHandler}
-                  title={label}
-                  className="absolute right-3 mr-0 rounded-full bg-black bg-opacity-50 p-2 text-white hover:bg-opacity-75 md:p-3 lg:p-4"
-                >
-                  ❯
-                </button>
-              )
-            }
-          >
-            {testimonials.map((testimonial, index) => (
-              <Testimonial key={index} testimonial={testimonial} />
-            ))}
-          </Carousel>
-        </div>
+        <Carousel
+          showArrows={false}
+          infiniteLoop={true}
+          showThumbs={false}
+          showStatus={false}
+          autoPlay={true}
+          interval={5000}
+          renderArrowPrev={(onClickHandler, hasPrev, label) =>
+            hasPrev && (
+              <button
+                type="button"
+                onClick={onClickHandler}
+                title={label}
+                className="absolute left-0 ml-6 rounded-full bg-black bg-opacity-50 p-2 text-white hover:bg-opacity-75 md:p-3 lg:p-4"
+              >
+                ❮
+              </button>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <button
+                type="button"
+                onClick={onClickHandler}
+                title={label}
+                className="absolute right-3 mr-0 rounded-full bg-black bg-opacity-50 p-2 text-white hover:bg-opacity-75 md:p-3 lg:p-4"
+              >
+                ❯
+              </button>
+            )
+          }
+        >
+          {testimonials.map((testimonial, index) => (
+            <Testimonial key={index} testimonial={testimonial} />
+          ))}
+        </Carousel>
       </div>
     </>
   );
 };
-
 export default UnseenHours;
