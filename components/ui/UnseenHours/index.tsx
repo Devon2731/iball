@@ -27,8 +27,8 @@ const Testimonial: React.FC<TestimonialProps> = ({ testimonial }) => {
 const UnseenHours: React.FC = () => {
   const testimonials = [
     {
-      text: "If I could rate this place higher than 5 stars, I would. The coaches are top-notch and highly knowledgeable, pushing everyone to improve in ways that are hard to put into words. Unlike other gyms that merely focus on making you feel good, here you gain real insight and confidence. All skill levels are welcome, and there's no room for egos—just pure hard work. From kids to young adults, I've seen this place positively impact everyone who comes through.",
-      author: 'Brian Grayson'
+      text: 'Our family first met Coach Ron when our 2 boys were in elementary school. They started playing basketball with him on his AAU teams. We all recognized right away that Coach had a unique gift for coaching kids. Yes, he knows basketball, but more importantly he can connect with the kids on a deep level because he cares about them and it shows. Our boys started doing group and private coaching sessions with Coach Ron to build upon their basketball skills which continued to improve. More importantly, Coach helped them with their life skills and helped them develop their character. For years we gladly made the 3 hour round trip drive to train with him because it was so worth it! Our oldest son is going into his sophomore year playing basketball at MIT. Our youngest son is going into his senior year in high school with the goal of playing in college as well. We will be forever grateful for the time Coach Ron dedicated to our boys. It definitely made them better basketball players and more importantly it made them better men. We highly recommend training with Coach!',
+      author: 'The Dobie Family✨✨✨✨✨'
     },
     {
       text: "The coaches here are amazing! They truly care about your progress and push you to be the best you can be. The environment is welcoming and supportive. I've seen great improvements in my kid's skills and confidence since joining.",
