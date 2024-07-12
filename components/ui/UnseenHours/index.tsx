@@ -31,8 +31,8 @@ const UnseenHours: React.FC = () => {
       author: 'The Dobie Family✨✨✨✨✨'
     },
     {
-      text: "The coaches here are amazing! They truly care about your progress and push you to be the best you can be. The environment is welcoming and supportive. I've seen great improvements in my kid's skills and confidence since joining.",
-      author: 'Emily Smith'
+      text: "I will forever be grateful for Coach Ron and the impact he has had on RJ's basketball skills since starting at I.ball 24/7. For the past 2-3 years since he met Coach Ron, he returns home with a completely different outlook toward his grades and his basketball commitment. His conversations with Ron must have really struck a chord, and I believe he has given him a new mindset and set him on a new path to achieve academically and to focus on his training and has open his eyes to limitless opportunities ahead of him. His viewpoints and knowledge of the game of basketball has also took leaps and bounds thanks to Ron passing forward all the necessary information to RJ. Our son has improved so much, a big difference in his skills and speed at which he plays. He has gotten quicker and more well rounded as a player. We are excited about his future ahead! Thank you so much for your continued commitment to our son's success.",
+      author: 'RJ SPENCER FAMILY'
     },
     {
       text: "An incredible place to train and grow. The community is fantastic, and the training sessions are top-notch. I highly recommend this gym to anyone looking to take their kid's skills to the next level.",
