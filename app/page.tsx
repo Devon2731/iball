@@ -4,7 +4,8 @@ import { PushPressCal } from 'components/pushpress-cal';
 import UnseenHours from 'components/ui/UnseenHours';
 
 export const metadata = {
-  description: 'iBall247 High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
+  description:
+    'iBall24/7 is the ultimate basketball training platform that revolutionizes how players improve their skills. Our advanced training programs are designed to elevate performance, offering personalized coaching and innovative drills to help you reach your full potential.',
   openGraph: { type: 'website' }
 };
 
