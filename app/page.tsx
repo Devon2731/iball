@@ -5,7 +5,7 @@ import UnseenHours from 'components/ui/UnseenHours';
 
 export const metadata = {
   description:
-    'iBall24/7 is the ultimate basketball training platform that revolutionizes how players improve their skills. Our advanced training programs are designed to elevate performance, offering personalized coaching and innovative drills to help you reach your full potential.',
+    "iBall247 is a premier basketball training company dedicated to elevating players' skills and performance. Offering personalized coaching and advanced training programs, iBall247 focuses on developing technical proficiency, physical fitness, and mental toughness to help athletes reach their full potential.",
   openGraph: { type: 'website' }
 };
 
